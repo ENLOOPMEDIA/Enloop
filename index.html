@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Azu en Loop: Un blog de análisis visual sobre cine, moda, cultura pop y narrativa.">
+    <meta name="keywords" content="blog cine, carrie bradshaw estilo, teoria del color, azu en loop">
+    <meta name="author" content="Azul">
+    
     <title>Azu en Loop</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +26,27 @@
             padding: 0;
         }
 
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        nav {
+            padding: 20px;
+            width: 100%;
+            position: absolute; /* Queda flotando arriba */
+            top: 0;
+            left: 0;
+            z-index: 100;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000050;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav a:hover { color: #D34E4E; }
+
+        /* --- PORTADA --- */
         .portada {
             height: 90vh;
             display: flex;
@@ -30,6 +55,7 @@
             align-items: center;
             overflow: hidden;
             position: relative;
+            padding-top: 50px; /* Espacio para el menú */
         }
 
         /* --- MARQUEE --- */
@@ -41,12 +67,7 @@
             mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
         }
-
-        .marquee-track {
-            display: inline-block;
-            animation: scroll 40s linear infinite;
-        }
-
+        .marquee-track { display: inline-block; animation: scroll 40s linear infinite; }
         .marquee-item {
             font-family: 'Playfair Display', serif;
             font-size: 24px;
@@ -57,16 +78,12 @@
             color: #3d4a96;
             opacity: 0.7;
         }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* --- TÍTULO PRINCIPAL --- */
+        /* --- TÍTULO Y LOOP --- */
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 85px; /* Tamaño de AZU EN */
+            font-size: 85px;
             margin: 0;
             line-height: 1;
             display: flex;
@@ -75,112 +92,52 @@
             gap: 10px; 
             flex-wrap: wrap; 
         }
-
-        /* --- AQUÍ ESTÁ EL CAMBIO DE TAMAÑO --- */
         .contenedor-loop {
             position: relative;
-            width: 300px; /* <--- MÁS ANCHO (Antes 220px) */
-            height: 160px; /* <--- MÁS ALTO (Antes 130px) */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 10px; /* Un pequeño ajuste para alinear con el texto */
+            width: 300px; height: 160px;
+            display: flex; align-items: center; justify-content: center;
+            margin-top: 10px;
         }
-
         .flechas-svg {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            fill: #D34E4E; /* Rojo Terracota */
-            z-index: 1;
-            transform: scale(1.2); /* Escala de las flechas */
-            opacity: 0.9;
+            position: absolute; width: 100%; height: 100%;
+            fill: #D34E4E; z-index: 1; transform: scale(1.2); opacity: 0.9;
         }
-
         .texto-loop {
-            position: relative;
-            z-index: 2;
-            font-family: 'Playfair Display', serif;
-            font-size: 65px; /* <--- LETRA MÁS GRANDE (Antes 42px) */
-            font-weight: 700;
-            font-style: italic;
-            color: #000050; 
-            margin-top: 0px; 
+            position: relative; z-index: 2;
+            font-family: 'Playfair Display', serif; font-size: 65px;
+            font-weight: 700; font-style: italic; color: #000050; 
         }
-        /* ------------------------------------- */
 
-        .bajada {
-            font-size: 22px;
-            font-weight: 300;
-            margin-top: 30px;
-            margin-bottom: 50px;
-            font-style: italic;
-        }
+        .bajada { font-size: 22px; font-weight: 300; margin-top: 30px; margin-bottom: 50px; font-style: italic; }
 
         .boton {
-            background-color: #D34E4E;
-            color: white;
-            padding: 18px 45px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            font-size: 14px;
-            text-transform: uppercase;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 15px rgba(211, 78, 78, 0.3);
+            background-color: #D34E4E; color: white; padding: 18px 45px;
+            text-decoration: none; border-radius: 50px; font-weight: bold;
+            letter-spacing: 1px; font-size: 14px; text-transform: uppercase;
+            transition: transform 0.3s; box-shadow: 0 4px 15px rgba(211, 78, 78, 0.3);
         }
+        .boton:hover { transform: scale(1.05); background-color: #b03030; }
 
-        .boton:hover {
-            transform: scale(1.05);
-            background-color: #b03030;
-        }
-
-        .sobre-mi {
-            background-color: #fcf6f5;
-            color: #1a1a1a;
-            padding: 100px 20px;
-        }
-
-        .contenido-texto {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: left;
-        }
-
-        h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 45px;
-            color: #000050;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-
-        p {
-            font-size: 19px;
-            line-height: 1.8;
-            margin-bottom: 25px;
-            color: #333;
-        }
-
-        .firma {
-            font-weight: bold;
-            margin-top: 50px;
-            text-align: center;
-            color: #D34E4E;
-            font-family: 'Playfair Display', serif;
-            font-size: 26px;
-            font-style: italic;
+        /* --- ESTILO INSTAGRAM PARA EL BLOG (FOTOS) --- */
+        #blog img {
+            display: block; width: 100%; max-width: 450px;
+            aspect-ratio: 1 / 1; object-fit: cover;
+            border-radius: 8px; margin: 0 auto 30px auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
     </style>
 </head>
 <body>
 
+    <nav>
+        <a href="index.html" style="color: #D34E4E; border-bottom: 2px solid #D34E4E;">INICIO</a>
+        <a href="sobre-mi.html">SOBRE MÍ</a>
+        <a href="contacto.html">CONTACTO</a>
+    </nav>
+
     <div class="portada">
         <div class="marquee-container">
             <div class="marquee-track">
-                <span class="marquee-item">Observa ~ Crea ~ Escribe ~</span>
-                <span class="marquee-item">Observa ~ Crea ~ Escribe ~</span>
                 <span class="marquee-item">Observa ~ Crea ~ Escribe ~</span>
                 <span class="marquee-item">Observa ~ Crea ~ Escribe ~</span>
                 <span class="marquee-item">Observa ~ Crea ~ Escribe ~</span>
@@ -192,50 +149,22 @@
         
         <h1>
             AZU EN
-            
             <div class="contenedor-loop">
-                <svg class="flechas-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/>
-                </svg>
-                
+                <svg class="flechas-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
                 <span class="texto-loop">LOOP</span>
             </div>
         </h1>
         
         <p class="bajada">Un laboratorio de historias que vuelven.</p>
-
-        <a href="#sobre-mi" class="boton">Entrar al Loop</a>
+        <a href="#blog" class="boton">Entrar al Loop</a>
     </div>
 
-    <div id="sobre-mi" class="sobre-mi">
-        <div class="contenido-texto">
-            <h2>Sobre mí</h2>
-            <p>Soy <strong>Azul</strong>, estudiante de comunicación y una apasionada de diseccionar las historias que nos rodean a través de la imagen y el relato.</p>
-            <p><strong>Azu en loop</strong> nació como un espacio para experimentar con la narrativa visual. Aquí, analizo desde el cine contemporáneo hasta las crónicas de la cultura cotidiana que a menudo pasan desapercibidas. Mi enfoque combina el rigor académico con una mirada curiosa sobre la moda, la estética de época y el diseño de interiores.</p>
-            <p>Creo que cada espacio tiene un relato que esconder y cada imagen una idea que merece ser analizada una y otra vez.</p>
-            <p class="firma">Bienvenidos al loop de mi mente.</p>
-        </div>
-    </div>
-<div id="sobre-mi" class="sobre-mi">
-        ...
-    </div>
-
-    <div id="blog" style="padding: 80px 20px; background-color: white;">
-        <div style="max-width: 700px; margin: 0 auto;">
-            
-            <h2 style="color: #D34E4E; margin-bottom: 60px;">Bitácora Visual</h2>
+    <div id="blog" style="padding: 80px 20px; background-color: #fcf6f5; min-height: 100vh;">
+        <div style="max-width: 700px; margin: 0 auto; text-align: left;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 40px; color: #D34E4E; text-align: center; margin-bottom: 60px;">Bitácora Visual</h2>
 
             </div>
     </div>
 
-</body> </html> <article style="margin-bottom: 80px; text-align: left;">
-                <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1000&auto=format&fit=crop" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
-                <h3 style="font-family: 'Playfair Display', serif; font-size: 32px; color: #D34E4E; margin-bottom: 15px;"></h3>
-                <div style=" line-height: 1.8; color: #333;">
-                    <p>Probando mi nuevo sistema de publicación desde el panel de control."</p>
-                </div>
-                <hr style="border: 0; border-top: 1px solid #E8C3C3; margin-top: 40px;">
-            </article>
-            
 </body>
 </html>

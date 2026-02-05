@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Azu en Loop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(rgba(232, 195, 195, 0.9), rgba(232, 195, 195, 0.9)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            color: #000050;
+            margin: 0; padding: 0;
+        }
+        nav { padding: 30px 20px; width: 100%; position: absolute; top: 0; left: 0; }
+        nav a { text-decoration: none; color: #000050; font-weight: bold; margin: 0 15px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
+        nav a:hover { color: #D34E4E; }
+
+        .contenedor { max-width: 600px; margin: 120px auto; padding: 40px; background: rgba(255,255,255,0.7); border-radius: 20px; backdrop-filter: blur(5px); }
+        h1 { font-family: 'Playfair Display', serif; font-size: 50px; color: #D34E4E; margin-bottom: 20px; margin-top: 0;}
+        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #D34E4E; border-radius: 10px; background: rgba(255,255,255,0.9); font-family: 'Inter'; box-sizing: border-box;}
+        button { background: #000050; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
+        button:hover { background: #D34E4E; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="sobre-mi.html">SOBRE MÍ</a>
+        <a href="contacto.html" style="color: #D34E4E; border-bottom: 2px solid #D34E4E;">CONTACTO</a>
+    </nav>
+
+    <div class="contenedor">
+        <h1>Hablemos</h1>
+        <p style="margin-bottom: 30px;">¿Tenés alguna idea, propuesta o simplemente querés charlar sobre cine? Escribime.</p>
+        
+        <form action="https://formspree.io/f/mqkrpzvb" method="POST">
+            <input type="text" name="nombre" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Email" required>
+            <textarea name="mensaje" rows="5" placeholder="Tu Mensaje..." required></textarea>
+            <button type="submit">ENVIAR MENSAJE</button>
+        </form>
+
+        <p style="margin-top: 30px; font-size: 14px;">O mandame un mail directo a: <br> <strong>hola@azuenloop.com</strong></p>
+    </div>
+
+</body>
+</html>
