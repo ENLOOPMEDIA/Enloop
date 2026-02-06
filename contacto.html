@@ -3,29 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - En Loop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Ponte en contacto con En Loop Media.">
+    <title>Contacto | En Loop</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            background: linear-gradient(rgba(232, 195, 195, 0.9), rgba(232, 195, 195, 0.9)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-color: #fcf6f5;
             font-family: 'Inter', sans-serif;
             text-align: center;
             color: #000050;
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Esto asegura que el footer quede abajo aunque haya poco texto */
         }
-        nav { padding: 30px 20px; width: 100%; position: absolute; top: 0; left: 0; }
-        nav a { text-decoration: none; color: #000050; font-weight: bold; margin: 0 15px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        nav {
+            padding: 20px;
+            width: 100%;
+            background-color: #fcf6f5;
+            border-bottom: 1px solid #E8C3C3;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000050;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         nav a:hover { color: #D34E4E; }
 
-        .contenedor { max-width: 600px; margin: 120px auto; padding: 40px; background: rgba(255,255,255,0.7); border-radius: 20px; backdrop-filter: blur(5px); }
-        h1 { font-family: 'Playfair Display', serif; font-size: 50px; color: #D34E4E; margin-bottom: 20px; margin-top: 0;}
-        input, textarea { width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #D34E4E; border-radius: 10px; background: rgba(255,255,255,0.9); font-family: 'Inter'; box-sizing: border-box;}
-        button { background: #000050; color: white; padding: 15px 40px; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; transition: 0.3s; width: 100%; text-transform: uppercase; letter-spacing: 1px; }
-        button:hover { background: #D34E4E; }
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container-contacto {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            flex: 1; /* Empuja el footer hacia abajo */
+        }
+
+        h1.titulo-seccion {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #D34E4E;
+            margin-bottom: 20px;
+        }
+
+        p.texto-bajada {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 40px;
+        }
+
+        .caja-mail {
+            background-color: white;
+            padding: 30px;
+            border: 1px solid #E8C3C3;
+            display: inline-block;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .link-mail {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #000050;
+            text-decoration: none;
+            font-weight: bold;
+            border-bottom: 2px solid #D34E4E;
+            transition: all 0.3s;
+        }
+        .link-mail:hover {
+            color: #D34E4E;
+            background-color: #fff0f0;
+        }
+
     </style>
 </head>
 <body>
@@ -36,19 +96,48 @@
         <a href="contacto.html" style="color: #D34E4E; border-bottom: 2px solid #D34E4E;">CONTACTO</a>
     </nav>
 
-    <div class="contenedor">
-        <h1>Hablemos</h1>
-        <p style="margin-bottom: 30px;">¿Tenés alguna idea, propuesta o simplemente querés charlar sobre cultura pop? Escribime.</p>
-        
-        <form action="https://formspree.io/f/mqkrpzvb" method="POST">
-            <input type="text" name="nombre" placeholder="Tu Nombre" required>
-            <input type="email" name="email" placeholder="Tu Email" required>
-            <textarea name="mensaje" rows="5" placeholder="Tu Mensaje..." required></textarea>
-            <button type="submit">ENVIAR MENSAJE</button>
-        </form>
+    <header style="text-align: center; padding: 40px 20px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 0.9; margin: 0;">
+            <span style="display: block; color: #000050;">EN</span>
+            <span style="display: block; color: #D34E4E;">LOOP</span>
+        </h2>
+    </header>
 
-        <p style="margin-top: 30px; font-size: 14px;">O mandame un mail directo a: <br> <strong>hola@enloop.com</strong></p>
+    <div class="container-contacto">
+        <h1 class="titulo-seccion">Hablemos</h1>
+        
+        <p class="texto-bajada">
+            ¿Tenés una propuesta, una idea editorial o simplemente querés saludar?
+            <br>
+            El buzón de <strong>En Loop</strong> está siempre abierto para nuevas historias.
+        </p>
+
+        <div class="caja-mail">
+            <p style="font-size: 0.9rem; text-transform: uppercase; color: #888; margin-bottom: 10px; letter-spacing: 2px;">Escríbenos a:</p>
+            <a href="mailto:enloop.media@gmail.com" class="link-mail">
+                enloop.media@gmail.com
+            </a>
+        </div>
+
+        <p style="font-size: 0.9rem; color: #666; margin-top: 20px;">
+            Respondemos lo más rápido posible (generalmente entre café y café). ☕
+        </p>
+
     </div>
+
+    <footer style="background-color: #F9F5F3; color: #000050; padding: 40px 20px; text-align: center; border-top: 1px solid #E8C3C3; margin-top: auto;">
+        
+        <h4 style="font-family: 'Playfair Display', serif; margin-bottom: 20px; letter-spacing: 1px;">EN LOOP</h4>
+
+        <a href="https://www.instagram.com/enloop.media" target="_blank" style="text-decoration: none; color: #D34E4E; font-family: sans-serif; font-weight: bold; font-size: 0.9rem; letter-spacing: 2px; border: 1px solid #D34E4E; padding: 10px 20px; display: inline-block; transition: all 0.3s;">
+            SÍGUENOS EN INSTAGRAM
+        </a>
+
+        <p style="font-family: sans-serif; font-size: 0.7rem; color: #666; margin-top: 30px;">
+            &copy; 2026 En Loop Media. Todos los derechos reservados.
+        </p>
+
+    </footer>
 
 </body>
 </html>
