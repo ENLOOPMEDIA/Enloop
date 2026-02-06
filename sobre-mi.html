@@ -1,30 +1,67 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mí - En Loop</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Conoce más sobre la creadora de En Loop.">
+    <title>Sobre Mí | En Loop</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+
     <style>
         body {
-            background: linear-gradient(rgba(232, 195, 195, 0.9), rgba(232, 195, 195, 0.9)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-color: #fcf6f5; /* Fondo clarito liso para esta sección */
             font-family: 'Inter', sans-serif;
             text-align: center;
             color: #000050;
-            margin: 0; padding: 0;
+            margin: 0;
+            padding: 0;
         }
-        nav { padding: 30px 20px; width: 100%; position: absolute; top: 0; left: 0; }
-        nav a { text-decoration: none; color: #000050; font-weight: bold; margin: 0 15px; font-size: 16px; text-transform: uppercase; letter-spacing: 1px;}
+
+        /* --- MENÚ DE NAVEGACIÓN (Igual al inicio) --- */
+        nav {
+            padding: 20px;
+            width: 100%;
+            background-color: #fcf6f5; /* Fondo sólido para que se lea bien */
+            border-bottom: 1px solid #E8C3C3;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000050;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
         nav a:hover { color: #D34E4E; }
 
-        .contenedor { max-width: 700px; margin: 120px auto 50px auto; padding: 20px; text-align: left; }
-        h1 { font-family: 'Playfair Display', serif; font-size: 50px; color: #D34E4E; text-align: center; margin-bottom: 40px; }
-        p { font-size: 19px; line-height: 1.8; margin-bottom: 25px; color: #333; }
-        
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container-sobre-mi {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+            text-align: left;
+        }
+
+        h1.titulo-seccion {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            color: #D34E4E;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        p.texto-cuerpo {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+        }
+    </style>
 </head>
 <body>
 
@@ -34,19 +71,38 @@
         <a href="contacto.html">CONTACTO</a>
     </nav>
 
-    <div class="contenedor">
-        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1964&auto=format&fit=crop" class="foto-perfil">
+    <header style="text-align: center; padding: 40px 20px;">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem; line-height: 0.9; margin: 0;">
+            <span style="display: block; color: #000050;">EN</span>
+            <span style="display: block; color: #D34E4E;">LOOP</span>
+        </h2>
+    </header>
 
-        <h1>Sobre mí</h1>
+    <div class="container-sobre-mi">
+        <h1 class="titulo-seccion">Quién soy</h1>
         
-        <p>Soy <strong>Azul</strong>, estudiante de comunicación y una apasionada de diseccionar las historias que nos rodean a través de la imagen y el relato.</p>
+        <p class="texto-cuerpo">
+            Hola, soy Azu. <strong>En Loop</strong> nace de la obsesión por esas historias, imágenes y tendencias que no podemos sacarnos de la cabeza. Este es un espacio para analizar la cultura pop, el cine y la moda desde una mirada curiosa y estética.
+        </p>
+
+        </p>
+        </div>
+
+    <footer style="background-color: #F9F5F3; color: #000050; padding: 40px 20px; text-align: center; border-top: 1px solid #E8C3C3;">
         
-        <p><strong>En loop</strong> nació como un espacio para experimentar con la narrativa visual. Aquí, analizo desde el cine contemporáneo hasta las crónicas de la cultura cotidiana que a menudo pasan desapercibidas.
-        <p>Creo que cada espacio tiene un relato que esconder y cada imagen una idea que merece ser analizada una y otra vez.</p>
-        
-        <p style="text-align: center; font-family: 'Playfair Display', serif; font-style: italic; color: #D34E4E; margin-top: 50px; font-size: 24px;">Bienvenidos al loop de mi mente.</p>
-    </div>
+        <h4 style="font-family: 'Playfair Display', serif; margin-bottom: 20px; letter-spacing: 1px;">EN LOOP</h4>
+
+        <a href="https://www.instagram.com/enloop.media" target="_blank" style="text-decoration: none; color: #D34E4E; font-family: sans-serif; font-weight: bold; font-size: 0.9rem; letter-spacing: 2px; border: 1px solid #D34E4E; padding: 10px 20px; display: inline-block; transition: all 0.3s;">
+            SÍGUENOS EN INSTAGRAM
+        </a>
+
+        <p style="font-family: sans-serif; font-size: 0.7rem; color: #666; margin-top: 30px;">
+            &copy; 2026 En Loop Media. Todos los derechos reservados.
+        </p>
+
+    </footer>
 
 </body>
 </html>
+
 
